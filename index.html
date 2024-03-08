@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div id="form-main">
+            <div id="form-div">                <form class="form" id="form1">
+                <h1>Teorema de triángulos</h1>    
+                <p class="sideA">
+                        <input name="sideA" type="text"
+                            class="validate[required,custom[onlyNumber],length[0,100]] feedback-input"
+                            placeholder="a" id="a" />
+                    </p>
+                    <p class="sideB">
+                        <input name="sideB" type="text"
+                            class="validate[required,custom[onlyNumber],length[0,100]] feedback-input"
+                            placeholder="b" id="b" />
+                    </p>
+                    <p class="sideC">
+                        <input name="sideC" type="text"
+                            class="validate[required,custom[onlyNumber],length[0,100]] feedback-input"
+                            placeholder="c" id="c" />
+                    </p>
+                    <div class="componente" id="resultados">
+                        
+                        <h2>Resultados</h2>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

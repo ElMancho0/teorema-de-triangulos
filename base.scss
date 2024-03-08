@@ -1,4 +1,54 @@
-$color-fondos: #F55;
-h1 {
-  background-color: $color-fondos;
+$color-fondo: #4372ba;
+$color-texto: #4a4a4a;
+$color-destacado: #082147;
+$base-font-size: 16px;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $color-fondo;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: $base-font-size;
+}
+
+section {
+  background-color: $color-fondo;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.25rem 0.4rem rgba(0, 0, 0, 0.1);
+  max-width: 25rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  margin: 0.6rem 0;
+}
+
+h2 {
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center; // Centra verticalmente
+}
+
+input[type="text"] {
+  padding: 0.6rem;
+  border: 0.3rem solid $color-texto;
+  border-radius: 0.3rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ease {
+  height: 1.25rem;
 }
