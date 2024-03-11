@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="style.css">
-    <script src="triangle.js"></script>
+    
 </head>
 
 <body>
@@ -30,14 +30,16 @@
                             class="validate[required,custom[onlyNumber],length[0,100]] feedback-input" placeholder="c"
                             id="sideC" />
                     </p>
-                    <button onclick="calcularTriangulo(event)">Calcular</button>
-                    <div class="componente" id="resultado">
+                    <div>
                         <h2>Resultados</h2>
+                        <div class="componente" id="resultado">
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
     </section>
+    <script src="triangle.js"></script>
 </body>
 
 </html>

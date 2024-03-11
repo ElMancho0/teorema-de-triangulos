@@ -43,12 +43,20 @@ function calcularTriangulo(event) {
     const ladoC = parseFloat(document.getElementById('sideC').value);
 
     if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC)) {
-        document.getElementById('resultado').innerText = 'Por favor, ingrese números válidos para los lados del triángulo.';
+        document.getElementById('resultado').innerHTML = `
+        <div id="back">
+            <p>Por favor, ingrese números válidos para los lados del triángulo.</p>
+        </div>
+    `;
         return;
     }
 
     if (!isTriangle(ladoA, ladoB, ladoC)) {
-        document.getElementById('resultado').innerText = 'Los lados ingresados no forman un triángulo válido.';
+        document.getElementById('resultado').innerHTML = `
+        <div id="back">
+            <p>Los lados ingresados no forman un triángulo válido.</p>
+        </div>
+    `;
         return;
     }
 
@@ -58,18 +66,35 @@ function calcularTriangulo(event) {
     const area = calculateArea(ladoA, ladoB, ladoC);
 
     document.getElementById('resultado').innerHTML = `
+        <div id="back">
         <p>El triángulo es de tipo: ${tipoPorLados} por lados.</p>
         <p>El triángulo es de tipo: ${tipoPorAngulos} por ángulos.</p>
         <p>El perímetro del triángulo es: ${perimetro}.</p>
         <p>El área del triángulo es: ${area}.</p>
+        </div>
     `;
 }
+document.addEventListener('DOMContentLoaded', function () {
+    const inputs = document.querySelectorAll('input[type="number"]');
+    inputs.forEach(input => {
+        input.addEventListener('input', function () {
+            const ladoA = parseFloat(document.getElementById('sideA').value);
+            const ladoB = parseFloat(document.getElementById('sideB').value);
+            const ladoC = parseFloat(document.getElementById('sideC').value);
+            if (!isNaN(ladoA) && !isNaN(ladoB) && !isNaN(ladoC)) {
+                calcularTriangulo(event);
+            }
+        });
+    });
 
-module.exports = {
-    isTriangle,
-    classifyBySides,
-    classifyByAngles,
-    calculatePerimeter,
-    calculateArea,
-    calcularTriangulo
-};
+    inputs.forEach(input => {
+        input.addEventListener('input', function () {
+            const ladoA = parseFloat(document.getElementById('sideA').value);
+            const ladoB = parseFloat(document.getElementById('sideB').value);
+            const ladoC = parseFloat(document.getElementById('sideC').value);
+            if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC)) {
+                document.getElementById('resultado').innerHTML = '';
+            }
+        });
+    });
+});
