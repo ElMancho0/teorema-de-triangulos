@@ -6,41 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
     <section>
-        <div id="form-main">
-            <div id="form-div">
-                <form class="form" id="form1">
-                    <h1>Teorema de triángulos</h1>
-                    <p class="sideA">
-                        <input name="sideA" type="number"
-                            class="validate[required,custom[onlyNumber],length[0,100]] feedback-input" placeholder="a"
-                            id="sideA" />
-                    </p>
-                    <p class="sideB">
-                        <input name="sideB" type="number"
-                            class="validate[required,custom[onlyNumber],length[0,100]] feedback-input" placeholder="b"
-                            id="sideB" />
-                    </p>
-                    <p class="sideC">
-                        <input name="sideC" type="number"
-                            class="validate[required,custom[onlyNumber],length[0,100]] feedback-input" placeholder="c"
-                            id="sideC" />
-                    </p>
-                    <div>
-                        <h2>Resultados</h2>
-                        <div class="componente" id="resultado">
-                        </div>
-                    </div>
-                </form>
+        <div class="form">
+            <h1>Teorema de triángulos</h1>
+            <p class="sideA">Lado A
+                <input name="sideA" type="number"
+                    class="validate[required,custom[onlyNumber],length[0,100]] feedback-input" placeholder="a"
+                    id="sideA" />
+            </p>
+            <p class="sideB">Lado B
+                <input name="sideB" type="number"
+                    class="validate[required,custom[onlyNumber],length[0,100]] feedback-input" placeholder="b"
+                    id="sideB" />
+            </p>
+            <p class="sideC">Lado c
+                <input name="sideC" type="number"
+                    class="validate[required,custom[onlyNumber],length[0,100]] feedback-input" placeholder="c"
+                    id="sideC" />
+            </p>
+            <div>
+                <h1>Resultados</h1>
+                <div class="componente" id="resultado"></div>
             </div>
         </div>
     </section>
     <script src="triangle.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
